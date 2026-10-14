@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #0d1424;
+  --bg-card: #111827;
+  --accent-blue: #00d4ff;
+  --accent-cyan: #00ffcc;
+  --accent-glow: rgba(0, 212, 255, 0.15);
+  --text-primary: #e2e8f0;
+  --text-muted: #64748b;
+  --border: #1e293b;
+}
+
+.light {
+  --bg-primary: #f0f4ff;
+  --bg-secondary: #e8eeff;
+  --bg-card: #ffffff;
+  --accent-blue: #0066cc;
+  --accent-cyan: #0099aa;
+  --accent-glow: rgba(0, 102, 204, 0.1);
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --border: #cbd5e1;
+}
+/* Lavender Cream Theme */
+.lavender {
+  --bg-primary: #f5f0ff;
+  --bg-secondary: #ede8ff;
+  --bg-card: #ffffff;
+  --accent-blue: #7c3aed;
+  --accent-cyan: #a855f7;
+  --accent-glow: rgba(124, 58, 237, 0.1);
+  --text-primary: #2d1b69;
+  --text-muted: #6b7280;
+  --border: #ddd6fe;
+}
+.bright{
+  --bg-primary:#ff0ff5;
+  --bg-secondary:#f0ff0f;
+  --bg-card:#ff00ff;
+  --accent-pink:#ff000f;
+  --accent-bright:rgba(110,57,89,0.3);
+  --text-primary:#67ff8f;
+  --border:20px;
+}
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.glow-text {
+  color: var(--accent-blue);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.glow-border {
+  border: 1px solid var(--accent-blue);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff, #00ffcc);
+  color: #0a0e1a;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.input-field {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 3px;
+}
+.react-flow__edge-path {
+  stroke: #00d4ff !important;
+  stroke-width: 2.5 !important;
+}
+
+.react-flow__edge.animated .react-flow__edge-path {
+  stroke-dasharray: 8;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  from { stroke-dashoffset: 8; }
+  to { stroke-dashoffset: 0; }
+}
+
+.react-flow__arrowhead path {
+  fill: #00d4ff !important;
+}
+
+.react-flow__controls button {
+  background: #111827 !important;
+  border-color: #1e293b !important;
+  color: #94a3b8 !important;
+}
+
+.react-flow__controls button:hover {
+  background: #1e293b !important;
+}
+
+.react-flow__minimap {
+  background: #0d1424 !important;
+}
+.react-flow__edge-path {
+  stroke: #00d4ff !important;
+  stroke-width: 2.5 !important;
+}
+
+.react-flow__arrowhead path {
+  fill: #00d4ff !important;
+}
