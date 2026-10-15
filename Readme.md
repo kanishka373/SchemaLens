@@ -28,10 +28,9 @@
 | Database access | mysql2 (reads `information_schema`) |
 
 ## Architecture
-
 ```mermaid
 flowchart TD
-    User([User]) --> Form
+    User(("User")) --> Form
 
     subgraph FE["Frontend: React + Vite"]
         Form["ConnectForm"] --> API["api.js (Axios)"]
@@ -51,9 +50,16 @@ flowchart TD
 
     API -- "POST /api/connect<br/>GET /api/tables, /relationships, /stats" --> Server
     Scanner -- "reads metadata" --> DB[("MySQL<br/>information_schema")]
-```
 
-## Getting Started
+    classDef toneNeutral fill:#f8fafc,stroke:#334155,stroke-width:1.5px,color:#0f172a
+    classDef toneBlue fill:#dbeafe,stroke:#2563eb,stroke-width:1.5px,color:#172554
+    classDef toneAmber fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
+    classDef toneMint fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d
+    class User toneNeutral
+    class Form,API,App,Overview,Graph,Explorer,Rel,Settings toneBlue
+    class Server,Routes,Controller,Scanner toneAmber
+    class DB toneMint
+```
 
 ### Prerequisites
 
