@@ -15,6 +15,13 @@
 - **Settings** - view the current connection details and disconnect.
 - **Polished experience** - animated connection screen, toast notifications, dark theme and consistent icons.
 
+## Screenshots
+
+![Dashboard](assets/dash.png)
+![Schema](assets/Schema.png)
+![Table](assets/Table.png)
+![Relationship](assets/Relationship.png)
+
 ## Tech Stack
 
 | Layer | Technology |
